@@ -2,24 +2,24 @@ class Solution {
 public:
     int maxProduct(vector<int>& nums) {
         int n = nums.size();
-        vector<int> maxDP(n); // max product ending at index i
-        vector<int> minDP(n); // min product ending at index i
+        if (n == 0) return 0;
 
-        maxDP[0] = nums[0];
-        minDP[0] = nums[0];
-        int result = nums[0];
+        int maxProd = nums[0]; // Final result
+        int currMax = nums[0]; // Max product ending at current position
+        int currMin = nums[0]; // Min product ending at current position
 
         for (int i = 1; i < n; ++i) {
-            if (nums[i] >= 0) {
-                maxDP[i] = max(nums[i], nums[i] * maxDP[i - 1]);
-                minDP[i] = min(nums[i], nums[i] * minDP[i - 1]);
-            } else {
-                maxDP[i] = max(nums[i], nums[i] * minDP[i - 1]);
-                minDP[i] = min(nums[i], nums[i] * maxDP[i - 1]);
+            // If the current number is negative, swap max and min
+            if (nums[i] < 0) {
+                swap(currMax, currMin);
             }
-            result = max(result, maxDP[i]);
+
+            currMax = max(nums[i], nums[i] * currMax);
+            currMin = min(nums[i], nums[i] * currMin);
+
+            maxProd = max(maxProd, currMax);
         }
 
-        return result;
+        return maxProd;
     }
 };
