@@ -1,43 +1,26 @@
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
-        // Check rows
+        // Use 9 sets for rows, columns, and boxes
+        unordered_set<char> rows[9], cols[9], boxes[9];
+
         for (int i = 0; i < 9; ++i) {
-            unordered_set<char> row;
             for (int j = 0; j < 9; ++j) {
-                char ele = board[i][j];
-                if (ele == '.') continue;
-                if (row.find(ele) != row.end()) return false;
-                row.insert(ele);
+                char val = board[i][j];
+                if (val == '.') continue;
+
+                // Compute box index (0 to 8)
+                int boxIndex = (i / 3) * 3 + (j / 3);
+
+                // Check row, column, and box
+                if (rows[i].count(val) || cols[j].count(val) || boxes[boxIndex].count(val))
+                    return false;
+
+                rows[i].insert(val);
+                cols[j].insert(val);
+                boxes[boxIndex].insert(val);
             }
         }
-
-        // Check columns
-        for (int j = 0; j < 9; ++j) {
-            unordered_set<char> col;
-            for (int i = 0; i < 9; ++i) {
-                char ele = board[i][j];
-                if (ele == '.') continue;
-                if (col.find(ele) != col.end()) return false;
-                col.insert(ele);
-            }
-        }
-
-        // Check 3x3 sub-boxes
-        for (int boxRow = 0; boxRow < 9; boxRow += 3) {
-            for (int boxCol = 0; boxCol < 9; boxCol += 3) {
-                unordered_set<char> box;
-                for (int i = 0; i < 3; ++i) {
-                    for (int j = 0; j < 3; ++j) {
-                        char ele = board[boxRow + i][boxCol + j];
-                        if (ele == '.') continue;
-                        if (box.find(ele) != box.end()) return false;
-                        box.insert(ele);
-                    }
-                }
-            }
-        }
-
         return true;
     }
 };
