@@ -1,4 +1,7 @@
-<h2><a href="https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree">Path In Zigzag Labelled Binary Tree</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>In an infinite binary tree where every node has two children, the nodes are labelled in row order.</p>
+
+# [Path In Zigzag Labelled Binary Tree](https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree) ![](https://img.shields.io/badge/Medium-orange)
+
+<p>In an infinite binary tree where every node has two children, the nodes are labelled in row order.</p>
 
 <p>In the odd numbered rows (ie., the first, third, fifth,...), the labelling is left to right, while in the even numbered rows (second, fourth, sixth,...), the labelling is right to left.</p>
 
@@ -27,3 +30,5 @@
 <ul>
 	<li><code>1 &lt;= label &lt;= 10^6</code></li>
 </ul>
+
+        
