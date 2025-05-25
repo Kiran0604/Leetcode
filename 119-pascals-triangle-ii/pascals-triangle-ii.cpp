@@ -1,17 +1,14 @@
 class Solution {
 public:
     vector<int> getRow(int rowIndex) {
-        vector<vector<int>> mat;
-        for (int i = 0; i <= rowIndex; i++) {
-            vector<int> temp;
-            for (int j = 0; j <= i; j++) {
-                if (j == 0 || j == i)
-                    temp.push_back(1);
-                else
-                    temp.push_back(mat[i - 1][j - 1] + mat[i - 1][j]);
+        vector<int> row(rowIndex + 1, 0);
+        row[0] = 1;
+        for (int i = 1; i <= rowIndex; i++) {
+            // Update from right to left to avoid overwriting values
+            for (int j = i; j > 0; j--) {
+                row[j] = row[j] + row[j - 1];
             }
-            mat.push_back(temp);
         }
-        return mat[rowIndex];
+        return row;
     }
 };
