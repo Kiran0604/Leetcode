@@ -1,7 +1,4 @@
-
-# [Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array) ![](https://img.shields.io/badge/Easy-green)
-
-<p>Given an array of integers <code>arr</code>, a <strong>lucky integer</strong> is an integer that has a frequency in the array equal to its value.</p>
+<h2><a href="https://leetcode.com/problems/find-lucky-integer-in-an-array">Find Lucky Integer in an Array</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given an array of integers <code>arr</code>, a <strong>lucky integer</strong> is an integer that has a frequency in the array equal to its value.</p>
 
 <p>Return <em>the largest <strong>lucky integer</strong> in the array</em>. If there is no <strong>lucky integer</strong> return <code>-1</code>.</p>
 
@@ -37,5 +34,3 @@
 	<li><code>1 &lt;= arr.length &lt;= 500</code></li>
 	<li><code>1 &lt;= arr[i] &lt;= 500</code></li>
 </ul>
-
-        
