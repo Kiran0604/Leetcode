@@ -1,7 +1,4 @@
-
-# [Valid Word](https://leetcode.com/problems/valid-word) ![](https://img.shields.io/badge/Easy-green)
-
-<p>A word is considered <strong>valid</strong> if:</p>
+<h2><a href="https://leetcode.com/problems/valid-word">Valid Word</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>A word is considered <strong>valid</strong> if:</p>
 
 <ul>
 	<li>It contains a <strong>minimum</strong> of 3 characters.</li>
@@ -65,5 +62,3 @@
 	<li><code>1 &lt;= word.length &lt;= 20</code></li>
 	<li><code>word</code> consists of English uppercase and lowercase letters, digits, <code>&#39;@&#39;</code>, <code>&#39;#&#39;</code>, and <code>&#39;$&#39;</code>.</li>
 </ul>
-
-        
