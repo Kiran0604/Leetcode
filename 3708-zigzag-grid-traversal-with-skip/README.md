@@ -1,4 +1,7 @@
-<h2><a href="https://leetcode.com/problems/zigzag-grid-traversal-with-skip">Zigzag Grid Traversal With Skip</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are given an <code>m x n</code> 2D array <code>grid</code> of <strong>positive</strong> integers.</p>
+
+# [Zigzag Grid Traversal With Skip](https://leetcode.com/problems/zigzag-grid-traversal-with-skip) ![](https://img.shields.io/badge/Easy-green)
+
+<p>You are given an <code>m x n</code> 2D array <code>grid</code> of <strong>positive</strong> integers.</p>
 
 <p>Your task is to traverse <code>grid</code> in a <strong>zigzag</strong> pattern while skipping every <strong>alternate</strong> cell.</p>
 
@@ -60,3 +63,5 @@
 	<li><code>2 &lt;= m == grid[i].length &lt;= 50</code></li>
 	<li><code>1 &lt;= grid[i][j] &lt;= 2500</code></li>
 </ul>
+
+        
