@@ -1,25 +1,19 @@
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-        int low = 0, mid = 0, high = nums.size() - 1; 
-        // Iterate until mid pointer exceeds high pointer
+        int low = 0, mid = 0, high = nums.size() - 1;
         while (mid <= high) {
             if (nums[mid] == 0) {
-                swap(&nums[low], &nums[mid]); // Swap 0 to the front
+                swap(nums[low], nums[mid]);
                 low++;
                 mid++;
             } else if (nums[mid] == 1) {
-                mid++; // Just move mid for 1
+                mid++;
             } else {
-                swap(&nums[mid], &nums[high]); // Swap 2 to the back
+                swap(nums[mid], nums[high]);
                 high--;
+                mid;
             }
         }
-    }
-
-    void swap(int* a, int* b) {
-        int t = *a;
-        *a = *b;
-        *b = t;
     }
 };
